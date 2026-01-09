@@ -192,11 +192,11 @@ function checkVisibility() {
         }
     }
     
-    // Animar features cards
+    // Animar features cards (NOVO - usando classes corretas)
     animateOrganizzeFeatures();
     
-    // Animar celular central
-    animateCenterPhone();
+    // Animar celular central (NOVO - usando classes corretas)
+    animateOrganizzePhone();
     
     // Animar steps
     const steps = document.querySelectorAll('.step');
@@ -241,17 +241,24 @@ function checkVisibility() {
     }
 }
 
-// Animar features cards
+// CORREÇÃO: Animar features cards com as NOVAS classes
 function animateOrganizzeFeatures() {
-    const featureCards = document.querySelectorAll('.feature-card-modern');
+    const featureCards = document.querySelectorAll('.feature-card-organizze');
+    
+    if (featureCards.length === 0) {
+        console.log('Nenhum card encontrado com a classe .feature-card-organizze');
+        return;
+    }
     
     featureCards.forEach((card, index) => {
         const cardTop = card.getBoundingClientRect().top;
         const cardVisible = 150;
         
         if (cardTop < window.innerHeight - cardVisible && !card.classList.contains('visible')) {
-            // Delay progressivo baseado na posição
-            const delay = index * 100;
+            // Delay progressivo baseado na coluna
+            const column = card.closest('.features-left') ? 0 : 
+                          card.closest('.features-right') ? 1 : -1;
+            const delay = column >= 0 ? (column * 4 + index) * 80 : index * 80;
             
             setTimeout(() => {
                 card.classList.add('visible');
@@ -260,9 +267,9 @@ function animateOrganizzeFeatures() {
     });
 }
 
-// Animar celular central
-function animateCenterPhone() {
-    const centerPhone = document.querySelector('.phone-mockup-center');
+// CORREÇÃO: Animar celular central com as NOVAS classes
+function animateOrganizzePhone() {
+    const centerPhone = document.querySelector('.phone-mockup-organizze');
     
     if (centerPhone) {
         const phoneTop = centerPhone.getBoundingClientRect().top;
@@ -270,14 +277,34 @@ function animateCenterPhone() {
         
         if (phoneTop < window.innerHeight - phoneVisible && !centerPhone.classList.contains('animated')) {
             centerPhone.classList.add('animated');
-            centerPhone.style.opacity = '1';
-            centerPhone.style.transform = 'translateY(0) scale(1)';
             
-            // Adicionar efeito de flutuação depois de 1s
-            setTimeout(() => {
-                centerPhone.style.animation = 'float 3s ease-in-out infinite';
-            }, 1000);
+            // Configurar botões do app
+            setupAppButtons();
         }
+    }
+}
+
+// Configurar botões do app dentro do celular
+function setupAppButtons() {
+    const appButtons = document.querySelectorAll('.app-btn-organizze');
+    
+    if (appButtons.length > 0) {
+        appButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Efeito de clique
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 200);
+                
+                // Ação baseada no botão
+                if (this.classList.contains('primary')) {
+                    console.log('Criar nova campanha');
+                } else {
+                    console.log('Ver relatórios');
+                }
+            });
+        });
     }
 }
 
@@ -316,68 +343,51 @@ function addFloatingWhatsAppButton() {
     
     document.body.appendChild(floatingButton);
     
-    // Adicionar estilo para o botão flutuante
-    const style = document.createElement('style');
-    style.textContent = `
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background-color: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 30px;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .floating-whatsapp:hover {
-            background-color: #1da851;
-            transform: scale(1.1);
-            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
-        }
-        
-        @media (max-width: 768px) {
+    // Adicionar estilo para o botão flutuante (já está no CSS, mas mantemos como fallback)
+    if (!document.querySelector('style[data-whatsapp]')) {
+        const style = document.createElement('style');
+        style.setAttribute('data-whatsapp', 'true');
+        style.textContent = `
             .floating-whatsapp {
-                width: 50px;
-                height: 50px;
-                font-size: 24px;
-                bottom: 15px;
-                right: 15px;
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 60px;
+                height: 60px;
+                background-color: #25D366;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 30px;
+                box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+                z-index: 1000;
+                text-decoration: none;
+                transition: all 0.3s ease;
             }
-        }
-    `;
-    
-    document.head.appendChild(style);
-}
-
-// Adicionar interatividade aos gráficos do celular
-function setupPhoneInteractions() {
-    const bars = document.querySelectorAll('.bar-mini');
-    
-    if (bars.length > 0) {
-        bars.forEach(bar => {
-            bar.addEventListener('mouseenter', function() {
-                this.style.opacity = '0.8';
-                this.style.transform = 'scaleY(1.1)';
-            });
             
-            bar.addEventListener('mouseleave', function() {
-                this.style.opacity = '1';
-                this.style.transform = 'scaleY(1)';
-            });
-        });
+            .floating-whatsapp:hover {
+                background-color: #1da851;
+                transform: scale(1.1);
+                box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
+            }
+            
+            @media (max-width: 768px) {
+                .floating-whatsapp {
+                    width: 50px;
+                    height: 50px;
+                    font-size: 24px;
+                    bottom: 15px;
+                    right: 15px;
+                }
+            }
+        `;
+        document.head.appendChild(style);
     }
 }
 
-// Adicionar interação nos botões de ação
+// Adicionar interação nos botões de ação (se existirem)
 function setupActionButtons() {
     const actionButtons = document.querySelectorAll('.action-btn');
     
@@ -389,14 +399,6 @@ function setupActionButtons() {
                 setTimeout(() => {
                     this.style.transform = '';
                 }, 200);
-                
-                // Ação para "Ver relatório"
-                if (this.classList.contains('outline')) {
-                    // Redirecionar para seção de recursos
-                    document.querySelector('#features').scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
             });
         });
     }
@@ -425,12 +427,17 @@ function setupLogoAnimation() {
 
 // Configurar quando o DOM carregar
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM carregado - SocialFlow');
+    
     setupWhatsAppLinks();
     addFloatingWhatsAppButton();
-    setupPhoneInteractions();
     setupActionButtons();
     setupLogoAnimation();
     
     // Inicializar checkVisibility após um pequeno delay
     setTimeout(checkVisibility, 100);
+    
+    // Log para debug
+    console.log('Cards encontrados:', document.querySelectorAll('.feature-card-organizze').length);
+    console.log('Celular encontrado:', document.querySelector('.phone-mockup-organizze') ? 'Sim' : 'Não');
 });
