@@ -3,38 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRS - Gestão de Redes Sociais</title>
+    <title>GRS Pro - Gestão Avançada de Redes Sociais</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Partículas animadas em background -->
+    <div class="particles-container" id="particles"></div>
+    
     <!-- Header e Navegação -->
-    <header>
+    <header class="header-sticky">
         <div class="container header-container">
             <div class="logo">
-                <a href="#">
-                    <i class="fas fa-chart-line"></i>
-                    <span>GRS</span>
+                <a href="#home">
+                    <i class="fas fa-chart-network"></i>
+                    <span>GRS<span class="logo-highlight">Pro</span></span>
                 </a>
             </div>
             
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#features">Recursos</a></li>
-                    <li><a href="#how-it-works">Como funciona</a></li>
-                    <li><a href="#testimonials">Depoimentos</a></li>
-                    <li><a href="#pricing">Planos</a></li>
-                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#home" class="nav-link active">Início</a></li>
+                    <li><a href="#features" class="nav-link">Recursos</a></li>
+                    <li><a href="#campaigns" class="nav-link">Campanhas</a></li>
+                    <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+                    <li><a href="#pricing" class="nav-link">Planos</a></li>
+                    <li><a href="#contact" class="nav-link">Contato</a></li>
                 </ul>
             </nav>
             
             <div class="header-actions">
-                <!--<a href="#" class="btn btn-outline">Entrar</a>
-                <a href="#pricing" class="btn btn-primary">Experimente grátis</a>-->
+                <a href="#" class="btn btn-outline btn-sm">Entrar</a>
+                <a href="#pricing" class="btn btn-gradient btn-sm">Teste Grátis</a>
                 <button class="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -47,93 +51,181 @@
     <div class="mobile-menu">
         <div class="mobile-menu-header">
             <div class="logo">
-                <i class="fas fa-chart-line"></i>
-                <span>SocialFlow</span>
+                <i class="fas fa-chart-network"></i>
+                <span>GRS<span class="logo-highlight">Pro</span></span>
             </div>
             <button class="mobile-menu-close">
                 <i class="fas fa-times"></i>
             </button>
         </div>
         <ul>
-            <li><a href="#home">Início</a></li>
-            <li><a href="#features">Recursos</a></li>
-            <li><a href="#how-it-works">Como funciona</a></li>
-            <li><a href="#testimonials">Depoimentos</a></li>
-            <li><a href="#pricing">Planos</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#home" class="nav-link active">Início</a></li>
+            <li><a href="#features" class="nav-link">Recursos</a></li>
+            <li><a href="#campaigns" class="nav-link">Campanhas</a></li>
+            <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+            <li><a href="#pricing" class="nav-link">Planos</a></li>
+            <li><a href="#contact" class="nav-link">Contato</a></li>
         </ul>
         <div class="mobile-menu-actions">
             <a href="#" class="btn btn-outline">Entrar</a>
-            <a href="#pricing" class="btn btn-primary">Experimente grátis</a>
+            <a href="#pricing" class="btn btn-gradient">Teste Grátis</a>
         </div>
     </div>
 
-    <!-- Seção Hero -->
-    <section id="home" class="hero">
+    <!-- Seção Hero Aprimorada -->
+    <section id="home" class="hero-enhanced">
+        <div class="hero-background"></div>
         <div class="container hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Gestão de redes sociais e tráfego pago <span class="highlight">simplificada</span></h1>
-                <p class="hero-description">Centralize, analise e otimize todas as suas campanhas em um só lugar. Economize tempo e aumente seus resultados com a tecnologia do SocialFlow.</p>
+            <div class="hero-content animated-left">
+                <div class="hero-badge">
+                    <span>🚀 Plataforma #1 em Gestão de Redes</span>
+                </div>
+                <h1 class="hero-title typing-animation">
+                    Transforme suas <span class="highlight">redes sociais</span> em máquinas de crescimento
+                </h1>
+                <p class="hero-description">
+                    Dashboard inteligente, gestão multicontas, análise preditiva e automação completa para Facebook, Instagram, TikTok, LinkedIn e mais.
+                </p>
                 <div class="hero-actions">
-                    <a href="#pricing" class="btn btn-primary btn-lg">
-                        <i class="fas fa-rocket"></i> Comece agora - 14 dias grátis
+                    <a href="#pricing" class="btn btn-gradient btn-lg pulse-animation">
+                        <i class="fas fa-rocket"></i> Começar Agora - 14 Dias Grátis
                     </a>
                     <a href="#features" class="btn btn-outline btn-lg">
-                        <i class="fas fa-play-circle"></i> Ver demonstração
+                        <i class="fas fa-play-circle"></i> Ver Demonstração
                     </a>
                 </div>
                 <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">+2.5k</span>
-                        <span class="stat-label">empresas atendidas</span>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number counter" data-target="3250">0</span>
+                            <span class="stat-label">empresas atendidas</span>
+                        </div>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">+85%</span>
-                        <span class="stat-label">aumento no engajamento</span>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number counter" data-target="89">0</span>
+                            <span class="stat-label">% engajamento</span>
+                        </div>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">+40%</span>
-                        <span class="stat-label">redução de custos</span>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number counter" data-target="65">0</span>
+                            <span class="stat-label">% tempo economizado</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="dashboard-preview">
-                    <div class="dashboard-header">
-                        <div class="dashboard-tabs">
-                            <span class="active">Dashboard</span>
-                            <span>Relatórios</span>
-                            <span>Agendamento</span>
-                        </div>
-                        <div class="dashboard-time">09:41</div>
-                    </div>
-                    <div class="dashboard-content">
-                        <div class="metric-card">
-                            <div class="metric-title">Engajamento Total</div>
-                            <div class="metric-value">42.8K</div>
-                            <div class="metric-change positive">+12.5%</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-title">Conversões</div>
-                            <div class="metric-value">1.2K</div>
-                            <div class="metric-change positive">+8.3%</div>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-title">Custo por Clique</div>
-                            <div class="metric-value">R$ 1.42</div>
-                            <div class="metric-change negative">-5.2%</div>
-                        </div>
-                        <div class="chart-placeholder">
-                            <div class="chart-bars">
-                                <div class="bar" style="height: 70%;"></div>
-                                <div class="bar" style="height: 85%;"></div>
-                                <div class="bar" style="height: 60%;"></div>
-                                <div class="bar" style="height: 90%;"></div>
-                                <div class="bar" style="height: 75%;"></div>
-                                <div class="bar" style="height: 95%;"></div>
-                                <div class="bar" style="height: 80%;"></div>
+            <div class="hero-image animated-right">
+                <div class="dashboard-3d-container">
+                    <div class="dashboard-3d">
+                        <div class="dashboard-header">
+                            <div class="dashboard-tabs">
+                                <span class="active"><i class="fas fa-home"></i> Overview</span>
+                                <span><i class="fas fa-chart-bar"></i> Analytics</span>
+                                <span><i class="fas fa-calendar-alt"></i> Schedule</span>
+                                <span><i class="fas fa-ad"></i> Ads</span>
                             </div>
-                            <div class="chart-label">Desempenho da última semana</div>
+                            <div class="dashboard-actions">
+                                <button class="dashboard-btn"><i class="fas fa-plus"></i></button>
+                                <button class="dashboard-btn"><i class="fas fa-bell"></i></button>
+                                <div class="dashboard-user">
+                                    <img src="https://i.pravatar.cc/150?img=1" alt="User">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dashboard-content">
+                            <div class="metric-grid">
+                                <div class="metric-card">
+                                    <div class="metric-header">
+                                        <h4>Engajamento</h4>
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <div class="metric-value">42.8K</div>
+                                    <div class="metric-progress">
+                                        <div class="progress-bar" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-header">
+                                        <h4>Alcance</h4>
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <div class="metric-value">1.2M</div>
+                                    <div class="metric-progress">
+                                        <div class="progress-bar" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-header">
+                                        <h4>Conversões</h4>
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </div>
+                                    <div class="metric-value">856</div>
+                                    <div class="metric-progress">
+                                        <div class="progress-bar" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-header">
+                                        <h4>ROI</h4>
+                                        <i class="fas fa-dollar-sign"></i>
+                                    </div>
+                                    <div class="metric-value">4.2x</div>
+                                    <div class="metric-progress">
+                                        <div class="progress-bar" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-container">
+                                <div class="chart-header">
+                                    <h4>Desempenho da Semana</h4>
+                                    <select class="chart-select">
+                                        <option>Últimos 7 dias</option>
+                                        <option>Últimos 30 dias</option>
+                                    </select>
+                                </div>
+                                <div class="chart-placeholder">
+                                    <div class="chart-bars">
+                                        <div class="bar-group">
+                                            <div class="bar facebook" style="height: 70%"></div>
+                                            <div class="bar-label">Seg</div>
+                                        </div>
+                                        <div class="bar-group">
+                                            <div class="bar instagram" style="height: 85%"></div>
+                                            <div class="bar-label">Ter</div>
+                                        </div>
+                                        <div class="bar-group">
+                                            <div class="bar tiktok" style="height: 95%"></div>
+                                            <div class="bar-label">Qua</div>
+                                        </div>
+                                        <div class="bar-group">
+                                            <div class="bar linkedin" style="height: 60%"></div>
+                                            <div class="bar-label">Qui</div>
+                                        </div>
+                                        <div class="bar-group">
+                                            <div class="bar youtube" style="height: 80%"></div>
+                                            <div class="bar-label">Sex</div>
+                                        </div>
+                                        <div class="bar-group">
+                                            <div class="bar twitter" style="height: 90%"></div>
+                                            <div class="bar-label">Sáb</div>
+                                        </div>
+                                        <div class="bar-group">
+                                            <div class="bar facebook" style="height: 75%"></div>
+                                            <div class="bar-label">Dom</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -141,62 +233,116 @@
         </div>
     </section>
 
-    <!-- Seção Recursos - Layout Organizze -->
-    <section id="features" class="features">
+    <!-- Seção de Redes Sociais Integradas -->
+    <section class="social-platforms">
+        <div class="container">
+            <div class="platforms-header">
+                <h3>Conecte todas as suas redes</h3>
+                <p>Integração nativa com as principais plataformas</p>
+            </div>
+            <div class="platforms-grid">
+                <div class="platform-card">
+                    <div class="platform-icon facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <span class="platform-name">Facebook</span>
+                    <span class="platform-stats">Ads • Pages • Groups</span>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <span class="platform-name">Instagram</span>
+                    <span class="platform-stats">Feed • Stories • Reels</span>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon tiktok">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <span class="platform-name">TikTok</span>
+                    <span class="platform-stats">Videos • Ads • Analytics</span>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <span class="platform-name">LinkedIn</span>
+                    <span class="platform-stats">Company • Personal • Ads</span>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon twitter">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <span class="platform-name">Twitter</span>
+                    <span class="platform-stats">Tweets • Trends • Ads</span>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon youtube">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <span class="platform-name">YouTube</span>
+                    <span class="platform-stats">Channel • Shorts • Analytics</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Recursos Aprimorada -->
+    <section id="features" class="features-enhanced">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Nossos principais recursos</h2>
-                <p class="section-subtitle">Conheça os recursos que vão revolucionar sua gestão de redes sociais</p>
+                <h2 class="section-title">Recursos Avançados para <span class="highlight">Redes Sociais</span></h2>
+                <p class="section-subtitle">Tudo que você precisa para dominar as redes sociais em um só lugar</p>
             </div>
             
             <div class="features-organizze-grid">
-                <!-- Coluna da Esquerda - 4 Recursos -->
+                <!-- Coluna Esquerda -->
                 <div class="features-left">
-                    <div class="feature-card-organizze">
+                    <div class="feature-card-organizze animated-card">
                         <div class="card-icon-organizze">
-                            <i class="fas fa-sync-alt"></i>
+                            <i class="fas fa-brain"></i>
                         </div>
-                        <h3>Conexão com Redes Sociais</h3>
-                        <p>Conecte Facebook, Instagram, LinkedIn, TikTok e outras plataformas para importar dados direto das redes.</p>
+                        <h3>IA para Conteúdo</h3>
+                        <p>Geração automática de posts, legendas e hashtags otimizadas usando inteligência artificial.</p>
+                        <div class="feature-badge">NOVO</div>
                     </div>
                     
-                    <div class="feature-card-organizze">
+                    <div class="feature-card-organizze animated-card">
                         <div class="card-icon-organizze">
-                            <i class="fas fa-bullseye"></i>
+                            <i class="fas fa-robot"></i>
                         </div>
-                        <h3>Limite de orçamento</h3>
-                        <p>Defina o quanto investir em cada campanha e otimize seus gastos sem esforço. Controle total dos investimentos.</p>
+                        <h3>Agendamento Inteligente</h3>
+                        <p>Posts automáticos no melhor horário para cada rede e público-alvo.</p>
                     </div>
                     
-                    <div class="feature-card-organizze">
+                    <div class="feature-card-organizze animated-card">
                         <div class="card-icon-organizze">
-                            <i class="fas fa-chart-bar"></i>
+                            <i class="fas fa-chart-network"></i>
                         </div>
-                        <h3>Relatórios detalhados</h3>
-                        <p>Resumos incríveis, com gráficos simples e completos para análise de desempenho em tempo real.</p>
+                        <h3>Análise de Concorrência</h3>
+                        <p>Monitore seus concorrentes e compare performance em tempo real.</p>
                     </div>
                     
-                    <div class="feature-card-organizze">
+                    <div class="feature-card-organizze animated-card">
                         <div class="card-icon-organizze">
-                            <i class="fas fa-credit-card"></i>
+                            <i class="fas fa-hashtag"></i>
                         </div>
-                        <h3>Controle de plataformas</h3>
-                        <p>Facebook Ads, Google Ads, TikTok Ads... controle todas suas plataformas de anúncios em um único lugar.</p>
+                        <h3>Otimização de Hashtags</h3>
+                        <p>Sugestões automáticas das melhores hashtags para cada tipo de conteúdo.</p>
                     </div>
                 </div>
                 
-                <!-- Celular no Centro - Conteúdo compacto -->
+                <!-- Celular Central Animado -->
                 <div class="features-center">
-                    <div class="phone-mockup-organizze">
-                        <!-- Barra superior do celular -->
+                    <div class="phone-mockup-organizze floating-phone">
                         <div class="phone-notch-organizze">
                             <div class="phone-speaker-organizze"></div>
                             <div class="phone-camera-organizze"></div>
+                            <div class="phone-camera-organizze"></div>
                         </div>
                         
-                        <!-- Status bar -->
                         <div class="phone-status-organizze">
-                            <span class="phone-time">9:41</span>
+                            <span class="phone-time">09:41</span>
                             <div class="phone-status-icons">
                                 <i class="fas fa-signal"></i>
                                 <i class="fas fa-wifi"></i>
@@ -204,12 +350,11 @@
                             </div>
                         </div>
                         
-                        <!-- Conteúdo do app - Versão compacta -->
                         <div class="app-content-organizze">
                             <div class="app-header-organizze">
                                 <div>
-                                    <h4>Bom dia, Matheus</h4>
-                                    <p class="app-subtitle">Sua gestão simplificada</p>
+                                    <h4>Dashboard Mobile</h4>
+                                    <p class="app-subtitle">Tudo na palma da mão</p>
                                 </div>
                                 <div class="app-avatar-organizze">
                                     <i class="fas fa-user-circle"></i>
@@ -218,19 +363,23 @@
                             
                             <div class="app-stats-organizze">
                                 <div class="stat-item-organizze">
+                                    <span class="stat-label-organizze">Posts Hoje</span>
+                                    <span class="stat-value-organizze">12</span>
+                                </div>
+                                <div class="stat-item-organizze">
                                     <span class="stat-label-organizze">Engajamento</span>
-                                    <span class="stat-value-organizze">42.8K</span>
+                                    <span class="stat-value-organizze">+24%</span>
                                 </div>
                             </div>
                             
                             <div class="app-networks-organizze">
-                                <h5>Minhas contas</h5>
+                                <h5>Redes Conectadas</h5>
                                 <div class="network-item-organizze">
                                     <div class="network-icon-organizze fb">
                                         <i class="fab fa-facebook-f"></i>
                                     </div>
                                     <span class="network-name-organizze">Facebook</span>
-                                    <span class="network-value-organizze">R$ 850,00</span>
+                                    <span class="network-status-organizze active">● Ativo</span>
                                 </div>
                                 
                                 <div class="network-item-organizze">
@@ -238,386 +387,522 @@
                                         <i class="fab fa-instagram"></i>
                                     </div>
                                     <span class="network-name-organizze">Instagram</span>
-                                    <span class="network-value-organizze">R$ 450,00</span>
+                                    <span class="network-status-organizze active">● Ativo</span>
                                 </div>
                                 
                                 <div class="network-item-organizze">
-                                    <div class="network-icon-organizze google">
-                                        <i class="fab fa-google"></i>
+                                    <div class="network-icon-organizze tiktok">
+                                        <i class="fab fa-tiktok"></i>
                                     </div>
-                                    <span class="network-name-organizze">Google Ads</span>
-                                    <span class="network-value-organizze">R$ 1.250,00</span>
-                                </div>
-                                
-                                <!--<div class="network-total-organizze">
-                                    <span>Total Setembro</span>
-                                    <span class="total-value-organizze">R$ 2.550,00</span>
+                                    <span class="network-name-organizze">TikTok</span>
+                                    <span class="network-status-organizze active">● Ativo</span>
                                 </div>
                             </div>
                             
                             <div class="app-actions-organizze">
-                                <div class="action-item-organizze">
-                                    <span>Campanhas ativas</span>
-                                    <span class="action-count-organizze">12</span>
+                                <h5>Próximos Posts</h5>
+                                <div class="schedule-item-organizze">
+                                    <div class="schedule-time">14:30</div>
+                                    <div class="schedule-content">
+                                        <span class="schedule-platform">Instagram</span>
+                                        <span class="schedule-text">Novo produto lançado! 🚀</span>
+                                    </div>
                                 </div>
-                                <span class="action-subtitle-organizze">Minhas plataformas</span>
+                                
+                                <div class="schedule-item-organizze">
+                                    <div class="schedule-time">16:00</div>
+                                    <div class="schedule-content">
+                                        <span class="schedule-platform">Facebook</span>
+                                        <span class="schedule-text">Live exclusiva hoje</span>
+                                    </div>
+                                </div>
                             </div>
                             
                             <div class="app-buttons-organizze">
                                 <button class="app-btn-organizze primary">
                                     <i class="fas fa-plus"></i>
-                                    Nova
+                                    Novo Post
                                 </button>
                                 <button class="app-btn-organizze">
                                     <i class="fas fa-chart-line"></i>
-                                    Ver
-                                </button> -->
+                                    Analytics
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Coluna da Direita - 4 Recursos -->
+                <!-- Coluna Direita -->
                 <div class="features-right">
-                    <div class="feature-card-organizze">
+                    <div class="feature-card-organizze animated-card">
                         <div class="card-icon-organizze">
-                            <i class="fas fa-chart-pie"></i>
+                            <i class="fas fa-comment-dollar"></i>
                         </div>
-                        <h3>Controle de contas</h3>
-                        <p>Pessoal, empresarial ou de clientes. Gerencie todas as contas no SocialFlow de forma unificada!</p>
+                        <h3>Gestão de Anúncios</h3>
+                        <p>Crie, otimize e acompanhe campanhas pagas em todas as plataformas.</p>
                     </div>
                     
-                    <div class="feature-card-organizze">
+                    <div class="feature-card-organizze animated-card">
                         <div class="card-icon-organizze">
-                            <i class="fas fa-bell"></i>
+                            <i class="fas fa-users-cog"></i>
                         </div>
-                        <h3>Alertas inteligentes</h3>
-                        <p>Receba alertas de desempenho das campanhas e otimize antes que o orçamento acabe!</p>
+                        <h3>Gestão de Equipe</h3>
+                        <p>Atribua funções, gerencie permissões e colabore em tempo real.</p>
                     </div>
                     
-                    <div class="feature-card-organizze">
+                    <div class="feature-card-organizze animated-card">
                         <div class="card-icon-organizze">
-                            <i class="fas fa-tags"></i>
+                            <i class="fas fa-shield-alt"></i>
                         </div>
-                        <h3>Criação de categorias</h3>
-                        <p>Crie suas próprias categorias de campanhas de acordo com a sua necessidade e organização.</p>
+                        <h3>Segurança Avançada</h3>
+                        <p>Autenticação em duas etapas e criptografia de ponta a ponta.</p>
                     </div>
                     
-                    <div class="feature-card-organizze">
+                    <div class="feature-card-organizze animated-card">
                         <div class="card-icon-organizze">
-                            <i class="fas fa-mobile-alt"></i>
+                            <i class="fas fa-bolt"></i>
                         </div>
-                        <h3>Multiplataforma</h3>
-                        <p>Acesse sua gestão de redes sociais de onde estiver, do celular ou computador. Sincronização em tempo real.</p>
+                        <h3>Automação Total</h3>
+                        <p>Workflows automatizados para respostas, reports e muito mais.</p>
+                        <div class="feature-badge">POPULAR</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção Como Funciona -->
-    <section id="how-it-works" class="how-it-works">
+    <!-- Seção de Campanhas de Sucesso -->
+    <section id="campaigns" class="success-campaigns">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Organize suas redes sociais</h2>
-                <p class="section-subtitle">O guia para o seu sucesso nas redes sociais</p>
+                <h2 class="section-title">Campanhas que <span class="highlight">Bombaram</span></h2>
+                <p class="section-subtitle">Veja cases reais de empresas que cresceram com nossa plataforma</p>
             </div>
             
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">01</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Conecte todas as suas redes</h3>
-                        <p class="step-description">Comece conectando suas contas do Facebook, Instagram, LinkedIn e outras plataformas para ter uma visão unificada.</p>
+            <div class="campaigns-grid">
+                <div class="campaign-card">
+                    <div class="campaign-header">
+                        <div class="campaign-logo fashion">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <div class="campaign-info">
+                            <h4>FashionStyle</h4>
+                            <span class="campaign-industry">Moda</span>
+                        </div>
+                    </div>
+                    <div class="campaign-stats">
+                        <div class="campaign-stat">
+                            <span class="stat-value">+320%</span>
+                            <span class="stat-label">Vendas</span>
+                        </div>
+                        <div class="campaign-stat">
+                            <span class="stat-value">1.2M</span>
+                            <span class="stat-label">Alcance</span>
+                        </div>
+                    </div>
+                    <p class="campaign-description">Crescimento orgânico no Instagram através de conteúdo estratégico e uso inteligente de Reels.</p>
+                    <div class="campaign-platforms">
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-tiktok"></i>
                     </div>
                 </div>
                 
-                <div class="step">
-                    <div class="step-number">02</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Centralize seu conteúdo</h3>
-                        <p class="step-description">Crie, edite e agende postagens para todas as suas redes sociais em um único calendário visual.</p>
+                <div class="campaign-card">
+                    <div class="campaign-header">
+                        <div class="campaign-logo tech">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="campaign-info">
+                            <h4>TechSolutions</h4>
+                            <span class="campaign-industry">Tecnologia</span>
+                        </div>
+                    </div>
+                    <div class="campaign-stats">
+                        <div class="campaign-stat">
+                            <span class="stat-value">+450%</span>
+                            <span class="stat-label">Leads</span>
+                        </div>
+                        <div class="campaign-stat">
+                            <span class="stat-value">85%</span>
+                            <span class="stat-label">Redução Custo/Lead</span>
+                        </div>
+                    </div>
+                    <p class="campaign-description">Campanha de LinkedIn Ads direcionada para decisores B2B com segmentação avançada.</p>
+                    <div class="campaign-platforms">
+                        <i class="fab fa-linkedin"></i>
+                        <i class="fab fa-facebook"></i>
                     </div>
                 </div>
                 
-                <div class="step">
-                    <div class="step-number">03</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Analise o desempenho</h3>
-                        <p class="step-description">Acompanhe métricas importantes como engajamento, alcance, conversões e ROI de todas as suas campanhas.</p>
+                <div class="campaign-card">
+                    <div class="campaign-header">
+                        <div class="campaign-logo food">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="campaign-info">
+                            <h4>FoodExpress</h4>
+                            <span class="campaign-industry">Alimentação</span>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">04</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Otimize seus resultados</h3>
-                        <p class="step-description">Use os insights para melhorar suas estratégias, aumentar o engajamento e reduzir custos com anúncios.</p>
+                    <div class="campaign-stats">
+                        <div class="campaign-stat">
+                            <span class="stat-value">+280%</span>
+                            <span class="stat-label">Pedidos Online</span>
+                        </div>
+                        <div class="campaign-stat">
+                            <span class="stat-value">65K</span>
+                            <span class="stat-label">Seguidores</span>
+                        </div>
+                    </div>
+                    <p class="campaign-description">Estratégia multicanal com Stories do Instagram e anúncios no Facebook para delivery.</p>
+                    <div class="campaign-platforms">
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-whatsapp"></i>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção Depoimentos -->
-    <section id="testimonials" class="testimonials">
+    <!-- Dashboard Demo Interativa -->
+    <section id="dashboard" class="dashboard-demo">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">O que nossos clientes dizem</h2>
-                <p class="section-subtitle">Empresas que transformaram sua gestão de redes sociais com o SocialFlow</p>
+                <h2 class="section-title">Experimente o <span class="highlight">Dashboard</span></h2>
+                <p class="section-subtitle">Veja na prática como nossa plataforma funciona</p>
             </div>
             
-            <div class="testimonials-slider">
-                <div class="testimonial-card active">
-                    <div class="testimonial-content">
-                        <p>"Com o SocialFlow, reduzimos o tempo de gestão de redes sociais pela metade e aumentamos nosso engajamento em 85%. A plataforma é intuitiva e os resultados são incríveis!"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user-circle"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4 class="author-name">Carla Mendes</h4>
-                            <p class="author-role">Diretora de Marketing - TechSolutions</p>
-                        </div>
-                    </div>
+            <div class="demo-container">
+                <div class="demo-tabs">
+                    <button class="demo-tab active" data-tab="analytics">Analytics</button>
+                    <button class="demo-tab" data-tab="scheduling">Agendamento</button>
+                    <button class="demo-tab" data-tab="ads">Anúncios</button>
+                    <button class="demo-tab" data-tab="reports">Relatórios</button>
                 </div>
                 
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"A gestão de tráfego pago ficou muito mais simples. Agora consigo controlar todos os meus anúncios em uma única plataforma e os relatórios são excelentes para apresentar aos clientes."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user-circle"></i>
+                <div class="demo-content">
+                    <div class="demo-preview">
+                        <div class="demo-screen analytics-screen active">
+                            <!-- Conteúdo do dashboard analytics -->
+                            <div class="analytics-preview">
+                                <div class="analytics-header">
+                                    <h4>Visão Geral - Setembro 2024</h4>
+                                    <div class="analytics-filters">
+                                        <select>
+                                            <option>Todas as Redes</option>
+                                            <option>Instagram</option>
+                                            <option>Facebook</option>
+                                            <option>TikTok</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="analytics-metrics">
+                                    <div class="metric-demo">
+                                        <div class="metric-label">Engajamento</div>
+                                        <div class="metric-value-demo">42.8K</div>
+                                        <div class="metric-trend up">+12.5%</div>
+                                    </div>
+                                    <div class="metric-demo">
+                                        <div class="metric-label">Alcance</div>
+                                        <div class="metric-value-demo">1.2M</div>
+                                        <div class="metric-trend up">+24.3%</div>
+                                    </div>
+                                    <div class="metric-demo">
+                                        <div class="metric-label">Conversões</div>
+                                        <div class="metric-value-demo">856</div>
+                                        <div class="metric-trend up">+8.7%</div>
+                                    </div>
+                                    <div class="metric-demo">
+                                        <div class="metric-label">Custo/Resultado</div>
+                                        <div class="metric-value-demo">R$ 2.15</div>
+                                        <div class="metric-trend down">-15.2%</div>
+                                    </div>
+                                </div>
+                                <div class="analytics-chart">
+                                    <div class="chart-demo">
+                                        <!-- Gráfico de exemplo -->
+                                        <div class="chart-bars-demo">
+                                            <div class="bar-demo" style="height: 70%; background: linear-gradient(to top, #4361ee, #3a56d4);"></div>
+                                            <div class="bar-demo" style="height: 85%; background: linear-gradient(to top, #7209b7, #5a0b9c);"></div>
+                                            <div class="bar-demo" style="height: 60%; background: linear-gradient(to top, #f72585, #d41a6c);"></div>
+                                            <div class="bar-demo" style="height: 90%; background: linear-gradient(to top, #4cc9f0, #3aa8d4);"></div>
+                                            <div class="bar-demo" style="height: 75%; background: linear-gradient(to top, #4361ee, #3a56d4);"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="author-info">
-                            <h4 class="author-name">Ricardo Santos</h4>
-                            <p class="author-role">CEO - Agência Digital MídiaPlus</p>
+                        
+                        <div class="demo-screen scheduling-screen">
+                            <!-- Conteúdo do agendamento -->
+                            <div class="scheduling-preview">
+                                <div class="scheduling-header">
+                                    <h4>Calendário de Posts</h4>
+                                    <button class="scheduling-btn">+ Novo Post</button>
+                                </div>
+                                <div class="scheduling-calendar">
+                                    <!-- Calendário simplificado -->
+                                    <div class="calendar-week">
+                                        <div class="day">Seg</div>
+                                        <div class="day">Ter</div>
+                                        <div class="day">Qua</div>
+                                        <div class="day">Qui</div>
+                                        <div class="day">Sex</div>
+                                        <div class="day">Sáb</div>
+                                        <div class="day">Dom</div>
+                                    </div>
+                                    <div class="calendar-posts">
+                                        <!-- Posts no calendário -->
+                                        <div class="post-marker instagram-post" style="left: 15%; top: 20%;"></div>
+                                        <div class="post-marker facebook-post" style="left: 40%; top: 50%;"></div>
+                                        <div class="post-marker tiktok-post" style="left: 65%; top: 30%;"></div>
+                                        <div class="post-marker linkedin-post" style="left: 85%; top: 70%;"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"O agendamento inteligente mudou nossa forma de trabalhar. Postamos no horário certo para cada público e o crescimento orgânico aumentou significativamente."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user-circle"></i>
+                    
+                    <div class="demo-controls">
+                        <div class="control-info">
+                            <h4>Controle Total das Suas Redes</h4>
+                            <p>Gerencie todas as plataformas em um só lugar com nossa interface intuitiva.</p>
+                            <ul class="control-features">
+                                <li><i class="fas fa-check-circle"></i> Postagem em múltiplas redes</li>
+                                <li><i class="fas fa-check-circle"></i> Análise de desempenho em tempo real</li>
+                                <li><i class="fas fa-check-circle"></i> Relatórios personalizados</li>
+                                <li><i class="fas fa-check-circle"></i> Colaboração em equipe</li>
+                            </ul>
                         </div>
-                        <div class="author-info">
-                            <h4 class="author-name">Amanda Lima</h4>
-                            <p class="author-role">Gerente de Mídias Sociais - FashionStyle</p>
+                        <div class="control-actions">
+                            <a href="#pricing" class="btn btn-gradient">Experimente Grátis</a>
+                            <a href="#" class="btn btn-outline">Agendar Demonstração</a>
                         </div>
                     </div>
-                </div>
-                
-                <div class="slider-controls">
-                    <button class="slider-btn prev-btn">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <div class="slider-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                    <button class="slider-btn next-btn">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção Planos -->
-    <section id="pricing" class="pricing">
+    <!-- Seção Planos (mantida similar) -->
+    <section id="pricing" class="pricing-enhanced">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Planos que cabem no seu bolso</h2>
+                <h2 class="section-title">Planos que <span class="highlight">Crescem com Você</span></h2>
                 <p class="section-subtitle">Escolha o plano ideal para o seu negócio. Todos incluem teste gratuito de 14 dias.</p>
+            </div>
+            
+            <div class="pricing-switcher">
+                <span>Mensal</span>
+                <label class="switch">
+                    <input type="checkbox" id="pricing-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span>Anual <span class="discount-badge">-20%</span></span>
             </div>
             
             <div class="pricing-cards">
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h3 class="plan-name">Básico</h3>
+                        <h3 class="plan-name">Start</h3>
                         <div class="plan-price">
-                            <span class="price">R$ 232,90</span>
+                            <span class="price">R$ 297</span>
                             <span class="period">/mês</span>
                         </div>
-                        <p class="plan-description">Ideal para pequenos negócios e freelancers</p>
+                        <p class="plan-description">Perfeito para freelancers e pequenos negócios</p>
                     </div>
                     <div class="plan-features">
                         <ul>
-                            <li><i class="fas fa-lock-open"></i> Até 3 perfis sociais</li>
-                            <li><i class="fas fa-lock-open"></i> Agendamento de postagens</li>
-                            <li><i class="fas fa-lock-open"></i> Análises básicas</li>
-                            <li><i class="fas fa-lock-open"></i> Suporte por email</li>
-                            <li><i class="fas fa-lock"></i> Gestão de anúncios</li>
-                            <li><i class="fas fa-lock"></i> Relatórios avançados</li>
+                            <li><i class="fas fa-check-circle"></i> Até 5 perfis sociais</li>
+                            <li><i class="fas fa-check-circle"></i> Agendamento de posts</li>
+                            <li><i class="fas fa-check-circle"></i> Análises básicas</li>
+                            <li><i class="fas fa-check-circle"></i> Suporte por email</li>
+                            <li><i class="fas fa-times-circle"></i> Gestão de anúncios</li>
+                            <li><i class="fas fa-times-circle"></i> Relatórios avançados</li>
+                            <li><i class="fas fa-times-circle"></i> IA para conteúdo</li>
                         </ul>
                     </div>
                     <div class="pricing-actions">
-                        <a href="https://wa.me/5588993678250?text=Olá! Gostaria de saber mais sobre o plano Básico do SocialFlow" target="_blank" class="btn btn-outline btn-block">Escolher plano</a>
+                        <a href="https://wa.me/5588993678250?text=Olá! Gostaria do plano Start do GRS Pro" target="_blank" class="btn btn-outline btn-block">
+                            <i class="fab fa-whatsapp"></i> Escolher Plano
+                        </a>
                     </div>
                 </div>
                 
                 <div class="pricing-card highlighted">
-                    <div class="pricing-badge">Mais popular</div>
+                    <div class="pricing-badge">Mais Popular</div>
                     <div class="pricing-header">
-                        <h3 class="plan-name">Profissional</h3>
+                        <h3 class="plan-name">Pro</h3>
                         <div class="plan-price">
-                            <span class="price">R$ 519,90</span>
+                            <span class="price">R$ 597</span>
                             <span class="period">/mês</span>
                         </div>
-                        <p class="plan-description">Perfeito para agências e empresas em crescimento</p>
+                        <p class="plan-description">Ideal para agências e empresas em crescimento</p>
                     </div>
                     <div class="plan-features">
                         <ul>
-                            <li><i class="fas fa-lock-open"></i> Até 10 perfis sociais</li>
-                            <li><i class="fas fa-lock-open"></i> Agendamento ilimitado</li>
-                            <li><i class="fas fa-lock-open"></i> Análises avançadas</li>
-                            <li><i class="fas fa-lock-open"></i> Gestão de anúncios</li>
-                            <li><i class="fas fa-lock-open"></i> Relatórios personalizados</li>
-                            <li><i class="fas fa-lock-open"></i> Suporte prioritário</li>
+                            <li><i class="fas fa-check-circle"></i> Até 15 perfis sociais</li>
+                            <li><i class="fas fa-check-circle"></i> Agendamento ilimitado</li>
+                            <li><i class="fas fa-check-circle"></i> Análises avançadas</li>
+                            <li><i class="fas fa-check-circle"></i> Gestão de anúncios</li>
+                            <li><i class="fas fa-check-circle"></i> IA para conteúdo</li>
+                            <li><i class="fas fa-check-circle"></i> 3 membros da equipe</li>
+                            <li><i class="fas fa-check-circle"></i> Suporte prioritário</li>
                         </ul>
                     </div>
                     <div class="pricing-actions">
-                        <a href="https://wa.me/5588993678250?text=Olá! Gostaria de experimentar o plano Profissional do SocialFlow" target="_blank" class="btn btn-primary btn-block">Adquirir Plano</a>
+                        <a href="https://wa.me/5588993678250?text=Olá! Gostaria do plano Pro do GRS Pro" target="_blank" class="btn btn-gradient btn-block">
+                            <i class="fab fa-whatsapp"></i> Começar Agora
+                        </a>
                     </div>
                 </div>
                 
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h3 class="plan-name">Empresarial</h3>
+                        <h3 class="plan-name">Enterprise</h3>
                         <div class="plan-price">
-                            <span class="price">R$ 1.129,90</span>
+                            <span class="price">R$ 1.297</span>
                             <span class="period">/mês</span>
                         </div>
-                        <p class="plan-description">Para grandes empresas e equipes múltiplas</p>
+                        <p class="plan-description">Para grandes empresas e múltiplas equipes</p>
                     </div>
                     <div class="plan-features">
                         <ul>
-                            <li><i class="fas fa-lock-open"></i> Perfis sociais ilimitados</li>
-                            <li><i class="fas fa-lock-open"></i> Gestão de equipe</li>
-                            <li><i class="fas fa-lock-open"></i> API personalizada</li>
-                            <li><i class="fas fa-lock-open"></i> Treinamento dedicado</li>
-                            <li><i class="fas fa-lock-open"></i> Integração com CRM</li>
-                            <li><i class="fas fa-lock-open"></i> Gerente de conta</li>
+                            <li><i class="fas fa-check-circle"></i> Perfis sociais ilimitados</li>
+                            <li><i class="fas fa-check-circle"></i> Equipe ilimitada</li>
+                            <li><i class="fas fa-check-circle"></i> API personalizada</li>
+                            <li><i class="fas fa-check-circle"></i> Treinamento dedicado</li>
+                            <li><i class="fas fa-check-circle"></i> Análise de concorrência</li>
+                            <li><i class="fas fa-check-circle"></i> Gerente de conta</li>
+                            <li><i class="fas fa-check-circle"></i> Onboarding personalizado</li>
                         </ul>
                     </div>
                     <div class="pricing-actions">
-                        <a href="https://wa.me/5588993678250?text=Olá! Gostaria de falar sobre o plano Empresarial do SocialFlow" target="_blank" class="btn btn-outline btn-block">Adquirir Plano</a>
+                        <a href="https://wa.me/5588993678250?text=Olá! Gostaria do plano Enterprise do GRS Pro" target="_blank" class="btn btn-outline btn-block">
+                            <i class="fab fa-whatsapp"></i> Falar com Vendas
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção FAQ -->
-    <section id="faq" class="faq">
+    <!-- Seção de Contato -->
+    <section id="contact" class="contact-section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Perguntas frequentes</h2>
-                <p class="section-subtitle">Tire suas dúvidas sobre o SocialFlow</p>
-            </div>
-            
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Preciso ter conhecimento técnico para usar o SocialFlow?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Não! O SocialFlow foi desenvolvido para ser intuitivo e fácil de usar, mesmo para quem não tem experiência técnica. Oferecemos tutoriais, documentação e suporte para ajudar você a começar.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Posso gerenciar contas de diferentes clientes na mesma plataforma?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sim! Com os planos Profissional e Empresarial, você pode gerenciar múltiplas contas de clientes separadamente, criar relatórios personalizados para cada um e atribuir diferentes membros da equipe para cada conta.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>O SocialFlow vende meus dados para terceiros?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Nunca! Sua privacidade e segurança são nossas prioridades. Todos os dados são criptografados e não compartilhamos nenhuma informação com terceiros. Você tem controle total sobre seus dados.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Posso cancelar minha assinatura a qualquer momento?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sim! Não há contratos de fidelidade. Você pode cancelar sua assinatura a qualquer momento através da sua conta, e não cobraremos mais nada após o período atual de faturamento.</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Pronto para transformar suas redes sociais?</h2>
+                    <p>Entre em contato para uma demonstração personalizada ou tire suas dúvidas.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>WhatsApp</h4>
+                                <p>(88) 99367-8250</p>
+                                <a href="https://wa.me/5588993678250" target="_blank" class="method-link">Enviar mensagem</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Email</h4>
+                                <p>contato@grspro.com</p>
+                                <a href="mailto:contato@grspro.com" class="method-link">Enviar email</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Horário</h4>
+                                <p>Segunda a Sexta</p>
+                                <p>9:00 - 18:00</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Quais redes sociais são compatíveis com o SocialFlow?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Suportamos Facebook, Instagram, Twitter, LinkedIn, TikTok, Pinterest e YouTube. Estamos constantemente adicionando novas plataformas conforme a demanda do mercado.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="faq-cta">
-                <div class="cta-content">
-                    <h3>Ainda com dúvidas?</h3>
-                    <p>Nossa Central de Ajuda está repleta de tutoriais e respostas para suas perguntas. Ou entre em contato diretamente com nosso time de suporte.</p>
-                </div>
-                <div class="cta-actions">
-                    <!--<a href="#" class="btn btn-outline">
-                        <i class="fas fa-question-circle"></i> Central de Ajuda
-                    </a>-->
-                    <a href="#" class="btn btn-primary">
-                        <i class="fas fa-headset"></i> Falar com suporte
-                    </a>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Seu email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Seu telefone">
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Tipo de negócio</option>
+                                <option>Agência</option>
+                                <option>E-commerce</option>
+                                <option>Serviços</option>
+                                <option>Indústria</option>
+                                <option>Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Como podemos ajudar?" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gradient btn-block">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <!-- Footer Aprimorado -->
+    <footer class="footer-enhanced">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <div class="footer-logo">
-                        <i class="fas fa-chart-line"></i>
-                        <span>GRS</span>
+                        <i class="fas fa-chart-network"></i>
+                        <span>GRS<span class="logo-highlight">Pro</span></span>
                     </div>
-                    <p class="footer-description">A plataforma completa para gestão de redes sociais e tráfego pago. Simplifique, analise e otimize suas campanhas.</p>
+                    <p class="footer-description">A plataforma mais completa para gestão de redes sociais. Simplifique, analise e otimize suas campanhas em um só lugar.</p>
                     <div class="footer-social">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 
                 <div class="footer-column">
-                    <h4 class="footer-title">Produto</h4>
+                    <h4 class="footer-title">Plataforma</h4>
                     <ul class="footer-links">
                         <li><a href="#features">Recursos</a></li>
-                        <li><a href="#how-it-works">Como funciona</a></li>
+                        <li><a href="#dashboard">Dashboard</a></li>
+                        <li><a href="#campaigns">Casos de Sucesso</a></li>
                         <li><a href="#pricing">Planos</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#">Atualizações</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Recursos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tutoriais</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">E-books</a></li>
+                        <li><a href="#">FAQ</a></li>
                     </ul>
                 </div>
                 
@@ -626,31 +911,42 @@
                     <ul class="footer-links">
                         <li><a href="#">Sobre nós</a></li>
                         <li><a href="#">Carreiras</a></li>
-                        <li><a href="#">Blog</a></li>
                         <li><a href="#">Contato</a></li>
                         <li><a href="#">Parcerias</a></li>
+                        <li><a href="#">Imprensa</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h4 class="footer-title">Legal</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Termos de Serviço</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
                         <li><a href="#">Política de Privacidade</a></li>
                         <li><a href="#">Cookies</a></li>
-                        <li><a href="#">GDPR</a></li>
                         <li><a href="#">LGPD</a></li>
+                        <li><a href="#">Segurança</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 GRS Tecnologia Ltda. CNPJ 12.345.678/0001-90</p>
+                <p>&copy; 2024 GRS Pro Tecnologia Ltda. CNPJ 12.345.678/0001-90</p>
                 <p>Desenvolvido com <i class="fas fa-heart"></i> para transformar a gestão de redes sociais</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5588993678250" target="_blank" class="floating-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Botão Voltar ao Topo -->
+    <button class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html>
